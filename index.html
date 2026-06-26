@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Atrayi 💗</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Nunito:wght@400;600;700;900&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:100%;min-height:100vh;}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+  @keyframes floatup{0%{transform:translateY(110vh);opacity:0}10%{opacity:0.13}90%{opacity:0.07}100%{transform:translateY(-10vh);opacity:0}}
+  @keyframes conffall{0%{transform:translateY(40vh) scale(0.3);opacity:1}100%{transform:translateY(-15vh) scale(1.3);opacity:0}}
+  @keyframes fadein{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.2)}28%{transform:scale(1)}42%{transform:scale(1.15)}56%{transform:scale(1)}}
+  @keyframes sunfall{0%{transform:translateY(-60px) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:0.8}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
+  @keyframes sungrow{0%{transform:scale(0) rotate(-20deg);opacity:0}60%{transform:scale(1.1) rotate(5deg);opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
+  @keyframes textglow{0%,100%{text-shadow:0 0 10px #ffd70055}50%{text-shadow:0 0 30px #ffd700aa,0 0 60px #ffb30066}}
+  @keyframes floatpetal{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(8deg)}100%{transform:translateY(0) rotate(0deg)}}
+  @keyframes slidein{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<div id="bg" style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;"></div>
+<div id="confetti" style="position:fixed;inset:0;pointer-events:none;z-index:999;display:none;"></div>
+<div id="sunshower" style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;display:none;"></div>
+
+<!-- PAGE 1 -->
+<div id="page1" style="min-height:100vh;background:#fff0f3;display:flex;align-items:center;justify-content:center;font-family:'Nunito',Arial,sans-serif;position:relative;z-index:1;">
+  <div style="background:#ffffff;border:2px solid #f9b8c8;border-radius:24px;padding:3rem 2.5rem 2.5rem;max-width:420px;width:90%;text-align:center;box-shadow:0 8px 40px #e63b6f22;">
+    <div style="font-size:4rem;margin-bottom:1.2rem;animation:pulse 1.6s ease-in-out infinite;">💗</div>
+    <h1 style="font-size:1.5rem;font-weight:700;color:#c0143c;line-height:1.4;margin-bottom:0.6rem;font-family:'Nunito',Arial,sans-serif;">Would you like to go on a Date with Yug?</h1>
+    <div style="display:flex;align-items:center;gap:0.5rem;margin:1rem 0 1.4rem;opacity:0.35;">
+      <span style="flex:1;height:1px;background:#e63b6f;display:block;"></span>
+      <span style="color:#e63b6f;">♥</span>
+      <span style="flex:1;height:1px;background:#e63b6f;display:block;"></span>
+    </div>
+    <p style="font-size:0.85rem;color:#f48fa8;letter-spacing:0.08em;margin-bottom:2rem;">choose wisely ✨</p>
+    <div style="display:flex;gap:1rem;justify-content:center;">
+      <button onclick="goPage2()" style="background-color:#e63b6f;color:#ffffff;-webkit-text-fill-color:#ffffff;border:none;border-radius:50px;padding:12px 36px;font-size:18px;font-weight:900;cursor:pointer;font-family:'Nunito',Arial,sans-serif;box-shadow:0 4px 16px #e63b6f55;">Yes 💕</button>
+      <button id="btn-no" onclick="onNo()" style="background-color:#ff85a1;color:#ffffff;-webkit-text-fill-color:#ffffff;border:none;border-radius:50px;padding:12px 36px;font-size:18px;font-weight:900;cursor:pointer;font-family:'Nunito',Arial,sans-serif;">No 🙈</button>
+    </div>
+    <div id="toast" style="display:none;margin-top:1.2rem;background:#fff0f3;border:1.5px solid #f9b8c8;border-radius:12px;padding:0.7rem 1.1rem;font-size:0.9rem;color:#c0143c;font-style:italic;font-family:'Nunito',Arial,sans-serif;"></div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" style="display:none;min-height:100vh;background:#fff0f3;font-family:'Nunito',Arial,sans-serif;position:relative;z-index:1;padding:2rem 1rem 3rem;">
+  <div style="max-width:500px;margin:0 auto 2.5rem;text-align:center;animation:fadein 0.8s ease forwards;">
+    <div style="font-size:3.5rem;animation:heartbeat 2s ease-in-out infinite;margin-bottom:1rem;">💝</div>
+    <div style="background:#ffffff;border:2px solid #f9b8c8;border-radius:20px;padding:2rem;box-shadow:0 6px 30px #e63b6f18;position:relative;">
+      <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#e63b6f;color:#fff;-webkit-text-fill-color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;padding:4px 16px;border-radius:20px;font-family:'Nunito',Arial,sans-serif;white-space:nowrap;">JUST FOR ATRAYI 💌</div>
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:#c0143c;line-height:1.75;margin-bottom:1rem;">"Are you a magician, Atrayi? Because every time I look at you, everyone else disappears." 🪄</p>
+      <p style="font-size:0.9rem;color:#f48fa8;font-family:'Nunito',Arial,sans-serif;">— Yug, clearly very smooth 😌</p>
+    </div>
+    <p style="margin-top:1.2rem;font-size:1rem;color:#c0143c;font-weight:600;">Now pick a date & let the magic happen 🗓️✨</p>
+  </div>
+  <div style="max-width:420px;margin:0 auto;background:#ffffff;border:2px solid #f9b8c8;border-radius:20px;padding:1.5rem;box-shadow:0 6px 30px #e63b6f18;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+      <button onclick="prevMonth()" style="background:#fff0f3;color:#c0143c;-webkit-text-fill-color:#c0143c;border:1.5px solid #f9b8c8;border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer;font-weight:900;font-family:Arial,sans-serif;">‹</button>
+      <div id="cal-title" style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#c0143c;font-weight:600;"></div>
+      <button onclick="nextMonth()" style="background:#fff0f3;color:#c0143c;-webkit-text-fill-color:#c0143c;border:1.5px solid #f9b8c8;border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer;font-weight:900;font-family:Arial,sans-serif;">›</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px;">
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Su</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Mo</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Tu</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">We</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Th</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Fr</div>
+      <div style="text-align:center;font-size:0.72rem;color:#f48fa8;font-weight:700;padding:4px 0;font-family:'Nunito',Arial,sans-serif;">Sa</div>
+    </div>
+    <div id="cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;"></div>
+    <div id="selected-msg" style="display:none;margin-top:1.2rem;text-align:center;background:#fff0f3;border:1.5px solid #f9b8c8;border-radius:12px;padding:0.9rem 1rem;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">🎉</div>
+      <div id="selected-text" style="font-family:'Playfair Display',serif;font-size:1rem;color:#c0143c;font-style:italic;"></div>
+      <div style="font-size:0.82rem;color:#f48fa8;margin-top:0.3rem;font-family:'Nunito',Arial,sans-serif;">Yug is already counting the days! 💕</div>
+      <button onclick="goPage3()" style="margin-top:1rem;background-color:#e63b6f;color:#ffffff;-webkit-text-fill-color:#ffffff;border:none;border-radius:50px;padding:10px 28px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Nunito',Arial,sans-serif;box-shadow:0 4px 14px #e63b6f44;">Confirm Date 💛</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" style="display:none;min-height:100vh;background:linear-gradient(180deg,#fffbe6 0%,#fff8d6 60%,#fff0f3 100%);font-family:'Nunito',Arial,sans-serif;position:relative;z-index:1;overflow:hidden;">
+  <div style="position:relative;z-index:2;text-align:center;padding:3rem 1.5rem 2rem;max-width:560px;margin:0 auto;animation:slidein 1s ease forwards;">
+    <div style="font-size:4rem;margin-bottom:0.8rem;animation:floatpetal 3s ease-in-out infinite;">🌻</div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:#b8860b;line-height:1.3;margin-bottom:0.5rem;animation:textglow 3s ease-in-out infinite;">Yug Always Loves Her</h1>
+    <div style="display:flex;align-items:center;gap:0.5rem;margin:1rem auto 1.8rem;max-width:300px;opacity:0.4;">
+      <span style="flex:1;height:1px;background:#e6a817;display:block;"></span>
+      <span style="color:#e6a817;font-size:1rem;">✦</span>
+      <span style="flex:1;height:1px;background:#e6a817;display:block;"></span>
+    </div>
+    <div style="background:#ffffffcc;border:1.5px solid #fde68a;border-radius:20px;padding:2rem;box-shadow:0 6px 30px #fbbf2420;margin-bottom:1.5rem;">
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:#92400e;line-height:1.95;margin-bottom:1.2rem;">
+        "Like a sunflower turns its face to the light,<br>
+        I find myself turning to you — always.<br>
+        Not because the world demands it,<br>
+        but because you are my warmth,<br>
+        my quiet, my home."
+      </p>
+      <div style="width:40px;height:1px;background:#fbbf24;margin:0 auto 1.2rem;opacity:0.5;"></div>
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:#92400e;line-height:1.95;">
+        "Atrayi, in every season,<br>
+        in every version of this life —<br>
+        it will always, always be you."
+      </p>
+      <p style="margin-top:1.2rem;font-size:0.88rem;color:#b45309;font-family:'Nunito',Arial,sans-serif;letter-spacing:0.06em;">— With every heartbeat, Yug 🌻</p>
+    </div>
+    <div style="background:#fff7ed;border:1.5px solid #fde68a;border-radius:14px;padding:0.8rem 1.2rem;display:inline-block;margin-bottom:1.5rem;">
+      <span id="p3-date-text" style="font-family:'Playfair Display',serif;font-size:0.95rem;color:#b45309;font-style:italic;"></span>
+    </div>
+    <div id="flower-garden" style="display:flex;justify-content:center;align-items:flex-end;gap:1rem;margin-top:1rem;flex-wrap:wrap;"></div>
+  </div>
+</div>
+
+<script>
+  const bg=document.getElementById('bg');
+  [5,14,23,32,41,50,59,68,77,86,95].forEach((left,i)=>{
+    const h=document.createElement('div');
+    h.textContent='♥';
+    h.style.cssText='position:absolute;color:#e63b6f;opacity:0.12;font-size:'+(1+(i%3)*0.5)+'rem;left:'+left+'%;animation:floatup '+(9+(i%4)*2)+'s '+(i*1.1)+'s linear infinite;';
+    bg.appendChild(h);
+  });
+
+  let noCount=0;
+  const noPhrases=["Humans do make mistakes... Try again! 😇","Are you sure? Think again! 🥺","That button isn't working today 💅","Oops! Wrong choice, darling 😘","Still no? My heart... 💔 Just say Yes!"];
+  function onNo(){
+    noCount++;
+    const t=document.getElementById('toast');
+    t.style.display='block';
+    t.textContent=noPhrases[Math.min(noCount-1,noPhrases.length-1)];
+    t.style.animation='none';void t.offsetWidth;t.style.animation='shake 0.4s ease';
+    if(noCount>=3){const b=document.getElementById('btn-no');b.style.transform='translate('+(Math.random()*80-40)+'px,'+(Math.random()*50-25)+'px)';}
+  }
+
+  function goPage2(){
+    const conf=document.getElementById('confetti');
+    conf.style.display='block';
+    for(let i=0;i<22;i++){
+      const h=document.createElement('div');
+      h.textContent=['💗','💖','💕','❤️','🌸'][i%5];
+      h.style.cssText='position:absolute;font-size:1.6rem;left:'+(Math.random()*90+5)+'%;animation:conffall 1s '+(Math.random()*0.4)+'s ease forwards;';
+      conf.appendChild(h);
+    }
+    setTimeout(()=>{
+      document.getElementById('page1').style.display='none';
+      document.getElementById('page2').style.display='block';
+      conf.style.display='none';conf.innerHTML='';
+      window.scrollTo(0,0);
+    },900);
+  }
+
+  const today=new Date();
+  const maxDate=new Date(today.getFullYear(),today.getMonth()+3,today.getDate());
+  let viewYear=today.getFullYear(),viewMonth=today.getMonth(),selectedDate=null;
+  const months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  function renderCal(){
+    document.getElementById('cal-title').textContent=months[viewMonth]+' '+viewYear;
+    const grid=document.getElementById('cal-grid');
+    grid.innerHTML='';
+    const first=new Date(viewYear,viewMonth,1).getDay();
+    const days=new Date(viewYear,viewMonth+1,0).getDate();
+    for(let i=0;i<first;i++)grid.appendChild(document.createElement('div'));
+    for(let d=1;d<=days;d++){
+      const cell=document.createElement('div');
+      const cellDate=new Date(viewYear,viewMonth,d);
+      const isPast=cellDate<new Date(today.getFullYear(),today.getMonth(),today.getDate());
+      const isFuture=cellDate>maxDate;
+      const isToday=cellDate.toDateString()===today.toDateString();
+      const isSel=selectedDate&&cellDate.toDateString()===selectedDate.toDateString();
+      const disabled=isPast||isFuture;
+      let bg2='transparent',col='#333',border='none',fw='400',cur='pointer',op='1';
+      if(disabled){col='#ddb8c4';cur='default';op='0.4';}
+      if(isToday&&!disabled){border='2px solid #e63b6f';col='#e63b6f';fw='700';}
+      if(isSel){bg2='#e63b6f';col='#ffffff';fw='900';border='none';}
+      cell.textContent=d;
+      cell.style.cssText='text-align:center;padding:7px 2px;font-size:0.88rem;border-radius:50%;background:'+bg2+';color:'+col+';-webkit-text-fill-color:'+col+';font-weight:'+fw+';border:'+border+';cursor:'+cur+';opacity:'+op+';font-family:"Nunito",Arial,sans-serif;';
+      if(!disabled){
+        cell.onmouseover=()=>{if(!isSel)cell.style.background='#fff0f3';};
+        cell.onmouseout=()=>{if(!isSel)cell.style.background='transparent';};
+        cell.onclick=()=>{selectedDate=new Date(viewYear,viewMonth,d);renderCal();showSelected();};
+      }
+      grid.appendChild(cell);
+    }
+  }
+
+  function prevMonth(){
+    if(new Date(viewYear,viewMonth-1,1)<new Date(today.getFullYear(),today.getMonth(),1))return;
+    viewMonth--;if(viewMonth<0){viewMonth=11;viewYear--;}renderCal();
+  }
+  function nextMonth(){
+    if(new Date(viewYear,viewMonth+1,1)>new Date(maxDate.getFullYear(),maxDate.getMonth(),1))return;
+    viewMonth++;if(viewMonth>11){viewMonth=0;viewYear++;}renderCal();
+  }
+
+  function showSelected(){
+    const msg=document.getElementById('selected-msg');
+    const txt=document.getElementById('selected-text');
+    msg.style.display='block';
+    const opts={weekday:'long',year:'numeric',month:'long',day:'numeric'};
+    txt.textContent='Our date is set for '+selectedDate.toLocaleDateString('en-IN',opts)+' 💖';
+  }
+
+  renderCal();
+
+  function goPage3(){
+    document.getElementById('page2').style.display='none';
+    document.getElementById('page3').style.display='block';
+    window.scrollTo(0,0);
+    if(selectedDate){
+      const opts={weekday:'long',year:'numeric',month:'long',day:'numeric'};
+      document.getElementById('p3-date-text').textContent='🗓️ Our date is confirmed — '+selectedDate.toLocaleDateString('en-IN',opts)+' 🌻';
+    }
+    const ss=document.getElementById('sunshower');
+    ss.style.display='block';
+    for(let i=0;i<28;i++){
+      const f=document.createElement('div');
+      f.textContent='🌻';
+      f.style.cssText='position:absolute;font-size:'+(1.2+Math.random()*1.2)+'rem;left:'+(Math.random()*100)+'%;top:-40px;animation:sunfall '+(5+Math.random()*6)+'s '+(Math.random()*4)+'s linear infinite;';
+      ss.appendChild(f);
+    }
+    const garden=document.getElementById('flower-garden');
+    ['🌻','🌼','🌸','🌻','🌼','🌻','🌸','🌻'].forEach((fl,i)=>{
+      const div=document.createElement('div');
+      div.style.cssText='font-size:'+(2+Math.random()*1.2)+'rem;animation:sungrow 0.8s '+(i*0.12)+'s ease forwards;opacity:0;display:inline-block;';
+      div.textContent=fl;
+      garden.appendChild(div);
+    });
+  }
+</script>
+</body>
+</html>
